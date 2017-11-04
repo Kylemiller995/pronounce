@@ -77,7 +77,7 @@ var renderWordPage = function (currentWord, phonetic, playAudio, renderLandingPa
 }
 
 var makeDictionaryRequest = function (currentWord, renderLandingPage) {
-  var url = "http://localhost:3000/api/oed/" + currentWord
+  var url = document.location.origin + "/api/oed/" + currentWord
   requestHelper.get(url, function (oedData) {
     var infoPane = renderInfoPane(oedData)
 

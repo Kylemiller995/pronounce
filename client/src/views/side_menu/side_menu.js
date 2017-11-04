@@ -33,7 +33,7 @@ var renderSideMenu = function (renderWordPage, renderLandingPage) {
     renderLandingPage()
   }
 
-  requestHelper.get("http://localhost:3000/api/words", function (words) {
+  requestHelper.get(document.location.origin + "/api/words", function (words) {
     words.forEach(function (word) {
       var savedWord = document.createElement("li")
       var savedWordLink = document.createElement("a")

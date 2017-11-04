@@ -29,7 +29,8 @@ requestHelper.post = function (url, payload, onRequestComplete) {
 
 requestHelper.getAudio = function (audioFileURL, onRequestComplete) {
   var encodedAudioFileURL = encodeURIComponent(audioFileURL)
-  var requestURL = "http://localhost:3000/api/audio/" + encodedAudioFileURL
+  var requestURL = document.location.origin +
+                   "/api/audio/" + encodedAudioFileURL
 
   var xhr = new XMLHttpRequest()
   xhr.open("GET", requestURL)

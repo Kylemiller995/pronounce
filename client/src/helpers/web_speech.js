@@ -1,7 +1,5 @@
-// var webkitSpeechRecognition = webkitSpeechRecognition || null
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-
 var startRecognition = function() {
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
   if (SpeechRecognition) {
     var recognition = new SpeechRecognition();
 

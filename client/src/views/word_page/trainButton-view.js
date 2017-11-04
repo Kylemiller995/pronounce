@@ -46,14 +46,14 @@ var renderTrainButton = function (currentWord, renderWordPage, renderLandingPage
       diagnostic.style["background-color"] = null
 
       var wordToSave = {word : currentWord, completed: true}
-      requestHelper.post("http://localhost:3000/api/words/" + wordToSave.word, wordToSave, function(data){
+      requestHelper.post(document.location.origin + "/api/words/" + wordToSave.word, wordToSave, function(data){
         clearSideMenu()
         renderSideMenu(renderWordPage, renderLandingPage)
       })
       move();
       } else {
       var wordToSave = {word : currentWord, completed: false}
-      requestHelper.post("http://localhost:3000/api/words/" + currentWord, wordToSave, function(data){
+      requestHelper.post(document.location.origin + "/api/words/" + currentWord, wordToSave, function(data){
         clearSideMenu()
         renderSideMenu(renderWordPage, renderLandingPage)
       })
